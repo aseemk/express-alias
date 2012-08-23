@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/aseemk/express-alias.png)](http://travis-ci.org/aseemk/express-alias)
 # Express-Alias
 
 Adds a convenience `app.alias()` method to Express for aliasing redirect
