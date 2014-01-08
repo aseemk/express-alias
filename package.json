@@ -3,7 +3,12 @@
 , "version": "0.1.0"
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "dependencies": {}
-, "devDependencies": {}
+, "devDependencies":
+  { "express": "2.x"
+  }
+, "peerDependencies":
+  { "express": "2.x"
+  }
 , "engines":
   { "node": "*"
   }
