@@ -1,6 +1,6 @@
 { "name": "express-alias"
 , "description": "Adds a convenience app.alias() method to Express."
-, "version": "0.1.0"
+, "version": "0.2.0"
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "dependencies": {}
 , "devDependencies":

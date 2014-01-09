@@ -3,6 +3,8 @@
 Adds a convenience `app.alias()` method to Express for aliasing redirect
 routes. The redirects are HTTP 301 by default, but this is customizable.
 
+Supports both Express 2 and Express 3.
+
 ## Example
 
 ```js
@@ -35,11 +37,6 @@ var express = require('express-alias');
 ```
 
 ## TODO
-
-This only patches HTTP servers; patch HTTPS ones too. Is there a way to do
-that in a generic way?
-
-Investigate support for Express 3 / Connect 2.
 
 Support route parameters (e.g. `'/user/:id'` &rarr; `'/users/:id'`).
 
