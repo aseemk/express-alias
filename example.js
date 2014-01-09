@@ -1,5 +1,13 @@
-// Usage (defaults to random port):
-// node example.js [<port>]
+// example.js
+// Either run directly, or require() for testing.
+//
+// Run directly (defaults to random port):
+//  node example.js [<port>]
+//
+// Require for testing:
+//  var app = require('./example');
+//  app.listen(port, function () { ... });
+//
 
 var express = require('./');
 var app = express.createServer();
@@ -10,12 +18,16 @@ app.get('/', function (req, res) {
     res.send('hello world');
 });
 
-app.alias('/301', '/');
-app.alias('/302', '/', 302);
+app.alias('/alias', '/');
+app.alias('/alias/302', '/', 302);
 
-app.listen(process.argv[2] || 0, function () {
-    console.log(
-        'express-alias example server listening at http://localhost:%d/...',
-        app.address().port
-    );
-});
+module.exports = app;
+
+if (module === require.main) {
+    app.listen(process.argv[2] || 0, function () {
+        console.log(
+            'express-alias example server listening at http://localhost:%d/...',
+            app.address().port
+        );
+    });
+}
