@@ -15,7 +15,7 @@ exports['express-alias'] = {
         req(app)
             .get('/alias')
             .expect(301)
-            .expect('Location', /^http:\/\/[^/]+\/$/)
+            .expect('Location', '/')
             .end(next);
     },
 
@@ -23,7 +23,7 @@ exports['express-alias'] = {
         req(app)
             .get('/alias/302')
             .expect(302)
-            .expect('Location', /^http:\/\/[^/]+\/$/)
+            .expect('Location', '/')
             .end(next);
     }
 

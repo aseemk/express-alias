@@ -4,12 +4,12 @@
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "dependencies": {}
 , "devDependencies":
-  { "express": "2.x"
+  { "express": "3.x"
   , "mocha": "1.x"
   , "supertest": "~0.8"
   }
 , "peerDependencies":
-  { "express": "2.x"
+  { "express": "*"
   }
 , "engines":
   { "node": "*"

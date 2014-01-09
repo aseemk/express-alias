@@ -10,7 +10,7 @@
 //
 
 var express = require('./');
-var app = express.createServer();
+var app = express();
 
 app.use(express.logger('dev'));
 
@@ -27,7 +27,7 @@ if (module === require.main) {
     app.listen(process.argv[2] || 0, function () {
         console.log(
             'express-alias example server listening at http://localhost:%d/...',
-            app.address().port
+            this.address().port
         );
     });
 }
