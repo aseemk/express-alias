@@ -11,18 +11,18 @@ exports['express-alias'] = {
             .end(next);
     },
 
-    'should redirect, using 301 by default': function (next) {
+    'should redirect, using Express’s default of 302': function (next) {
         req(app)
             .get('/alias')
-            .expect(301)
+            .expect(302)
             .expect('Location', '/')
             .end(next);
     },
 
     'should redirect, allowing other status codes': function (next) {
         req(app)
-            .get('/alias/302')
-            .expect(302)
+            .get('/alias/301')
+            .expect(301)
             .expect('Location', '/')
             .end(next);
     }

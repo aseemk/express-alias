@@ -3,17 +3,19 @@
 # Express-Alias
 
 Adds a convenience `app.alias()` method to Express for aliasing redirect
-routes. The redirects are HTTP 301 by default, but this is customizable.
+routes.
 
 Supports both Express 2 and Express 3.
 
 ## Example
 
 ```js
+// uses Express's default redirect status (currently 302):
 app.alias('/privacy', '/privacy-policy');
 app.alias('/terms', '/terms-of-service');
 
-app.alias('/aseem', '/aseemk', 302);    // temporary redirect
+// but you can explicitly specify a status as well:
+app.alias('/aseem', '/aseemk', 301);
 ```
 
 ## Installation

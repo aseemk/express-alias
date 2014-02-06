@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 
 app.alias('/alias', '/');
-app.alias('/alias/302', '/', 302);
+app.alias('/alias/301', '/', 301);
 
 module.exports = app;
 

@@ -6,7 +6,8 @@ var app = express.application || express.HTTPServer.prototype;
 
 // TODO support passing through parameters, e.g. ':id' etc.
 app.alias = function (from, to, status) {
+    var args = [].slice.call(arguments, 1);
     return this.get(from, function (req, res, next) {
-        return res.redirect(to, status || 301);
+        return res.redirect.apply(res, args);
     });
 };
